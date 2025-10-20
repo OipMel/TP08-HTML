@@ -5,6 +5,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andrew Lincoln - Biografía</title>
 <link rel="stylesheet" href="css/styles.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .biografia {
+    flex: 2;
+    min-width: 300px;
+  }
+
+  .info {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .info table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .info th, .info td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Resto de información debajo de la biografía */
+  .extra-info {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .extra-info h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .extra-info p {
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+
+    .info {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+
+    .info img {
+      max-width: 150px;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -22,10 +104,9 @@
     <p>Andrew Clutterbuck nació en Londres. Su padre es ingeniero civil y su madre enfermera. Su familia se mudó a Hull y luego a Bath, donde asistió a la escuela de Beechen Cliff. Allí consiguió su primer papel interpretando a Jack Dawkins en una versión de la obra <em>Oliver!</em></p>
   </section>
 
-  <!-- Información personal -->
+  <!-- Información personal a la derecha -->
   <aside class="info">
-    <h3>Andrew Lincoln</h3>
-    <img src="images/Andrew_Lincoln.jpeg" alt="Andrew Lincoln en 2018">
+    <img src="TP08-HTML/images/Andrew.jpg" alt="Andrew Lincoln">
     <table>
       <tr><th>Nombre completo</th><td>Andrew James Clutterbuck</td></tr>
       <tr><th>Nacimiento</th><td>14 de septiembre de 1973, Londres, Inglaterra</td></tr>
@@ -34,7 +115,18 @@
       <tr><th>Conocido por</th><td>Rick Grimes en The Walking Dead</td></tr>
     </table>
   </aside>
+
+  <!-- Resto de la información debajo de la biografía -->
+  <section class="extra-info">
+    <h3>Logros y carrera</h3>
+    <p>Andrew Lincoln ha participado en numerosas series y películas británicas antes de su fama internacional. Ha sido reconocido por su versatilidad y profundidad en los roles dramáticos.</p>
+
+    <h3>Galería</h3>
+    <p>Puedes incluir aquí fotos, videos o enlaces a entrevistas.</p>
+  </section>
+
 </main>
 
 </body>
 </html>
+
