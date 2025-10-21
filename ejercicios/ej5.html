@@ -1,92 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrew Lincoln - Biografía</title>
-<link rel="stylesheet" href="css/styles.css">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andrew Lincoln - Biografía</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
 
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
+  <style>
+    :root {
+      --color-principal: #1e1e1e;
+      --color-secundario: #f4f4f4;
+      --color-acento: #c62828;
+      --color-texto: #333;
+    }
 
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-  }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: var(--color-texto);
+    }
 
-  .biografia {
-    flex: 2;
-    min-width: 300px;
-  }
+    header {
+      background-color: var(--color-principal);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
-  .info {
-    flex: 1;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-  .info img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-
-  .info table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  .info th, .info td {
-    text-align: left;
-    padding: 0.5rem;
-    border-bottom: 1px solid #ccc;
-  }
-
-  /* Resto de información debajo de la biografía */
-  .extra-info {
-    width: 100%;
-    margin-top: 2rem;
-  }
-
-  .extra-info h3 {
-    margin-bottom: 0.5rem;
-  }
-
-  .extra-info p {
-    margin-bottom: 1rem;
-  }
-
-  @media (max-width: 768px) {
     .content {
-      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .biografia {
+      flex: 2;
+      min-width: 300px;
     }
 
     .info {
-      flex-direction: row;
-      justify-content: flex-start;
-      gap: 1rem;
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fafafa;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     .info img {
-      max-width: 150px;
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
     }
-  }
-</style>
+
+    .info table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .info th, .info td {
+      text-align: left;
+      padding: 0.5rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--color-acento);
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+    }
+
+    h3 {
+      color: var(--color-acento);
+      margin-top: 1rem;
+    }
+
+    .extra-info {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: var(--color-secundario);
+      border-radius: 12px;
+    }
+
+    .extra-info h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-principal);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: var(--color-principal);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -95,18 +146,37 @@
 </header>
 
 <main class="content">
-  <!-- Biografía -->
   <section class="biografia">
     <h2>Biografía</h2>
     <p>Andrew James Clutterbuck (Londres, 14 de septiembre de 1973), más conocido como Andrew Lincoln, es un actor británico. Su primera actuación televisiva importante la obtuvo en el drama de la BBC <em>This Life</em> (1996-1997), aunque es popularmente conocido por interpretar a Rick Grimes en <em>The Walking Dead</em> (2010-2022) y por su rol en la comedia británica <em>Teachers</em> (2001-2003).</p>
 
     <h3>Primeros años</h3>
     <p>Andrew Clutterbuck nació en Londres. Su padre es ingeniero civil y su madre enfermera. Su familia se mudó a Hull y luego a Bath, donde asistió a la escuela de Beechen Cliff. Allí consiguió su primer papel interpretando a Jack Dawkins en una versión de la obra <em>Oliver!</em></p>
+
+    <h2>Trayectoria</h2>
+    <p>Se formó como actor en la Royal Academy of Dramatic Art (RADA). Entre sus trabajos más reconocidos están:</p>
+    <ul>
+      <li><strong>This Life</strong> (1996–1997): interpretó a Egg.</li>
+      <li><strong>Teachers</strong> (2001–2003): Simon Casey.</li>
+      <li><strong>Love Actually</strong> (2003): Mark, en una de las escenas más icónicas del film.</li>
+    </ul>
+
+    <h2>The Walking Dead</h2>
+    <h3>Personaje: Rick Grimes</h3>
+    <p>Exoficial de policía que despierta de un coma en un mundo postapocalíptico. El personaje evoluciona de un líder moral a un sobreviviente endurecido.</p>
+
+    <h3>Impacto y evolución</h3>
+    <p>Interpretó a Rick de 2010 a 2018. Regresó en 2024 con la miniserie <em>The Walking Dead: The Ones Who Live</em>.</p>
+
+    <h3>Reconocimiento</h3>
+    <ul>
+      <li>Premios Saturn y People's Choice Awards.</li>
+      <li>Reconocido por su intensidad actoral y liderazgo en la serie.</li>
+    </ul>
   </section>
 
-  <!-- Información personal a la derecha -->
   <aside class="info">
-    <img src="TP08-HTML/images/Andrew.jpg" alt="Andrew Lincoln">
+    <img src="../images/andrew-lincoln.jpeg" alt="Andrew Lincoln" />
     <table>
       <tr><th>Nombre completo</th><td>Andrew James Clutterbuck</td></tr>
       <tr><th>Nacimiento</th><td>14 de septiembre de 1973, Londres, Inglaterra</td></tr>
@@ -115,18 +185,22 @@
       <tr><th>Conocido por</th><td>Rick Grimes en The Walking Dead</td></tr>
     </table>
   </aside>
-
-  <!-- Resto de la información debajo de la biografía -->
-  <section class="extra-info">
-    <h3>Logros y carrera</h3>
-    <p>Andrew Lincoln ha participado en numerosas series y películas británicas antes de su fama internacional. Ha sido reconocido por su versatilidad y profundidad en los roles dramáticos.</p>
-
-    <h3>Galería</h3>
-    <p>Puedes incluir aquí fotos, videos o enlaces a entrevistas.</p>
-  </section>
-
 </main>
+
+<section class="extra-info">
+  <h2>Galería</h2>
+  <div class="galeria">
+    <img src="../images/AAAL.jpeg" alt="Andrew Lincoln en The Walking Dead" />
+    <img src="../images/AAL.jpeg" alt="Andrew Lincoln en un evento" />
+    <img src="../images/AL.jpeg" alt="Andrew Lincoln en una entrevista" />
+    <img src="../images/WD.jpeg" alt="Andrew Lincoln en una alfombra roja" />
+  </div>
+</section>
+
+<footer>
+  <p>&copy; Información obtenida de la entrada “Andrew Lincoln” en Wikipedia (versión en español)</p>
+  <p>Fuente: <a href="https://es.wikipedia.org/wiki/Andrew_Lincoln" style="color: #ffffff;">Wikipedia</a> (consultado el 21/10/2025).</p>
+</footer>
 
 </body>
 </html>
-
