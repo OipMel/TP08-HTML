@@ -3,208 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ficha de inscripcion</title>
-<link rel="stylesheet" href="css/styles.css">
-   <style>
-    header {
+<title>Ficha de Inscripción - Club Liro</title>
+
+<style>
+  /* ====== ESTILO GENERAL ====== */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f2f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  header {
     background-color: #242322;
     color: #fff;
     padding: 1rem;
     text-align: center;
   }
-    nav ul { list-style: none; display: flex; gap: 20px; background: #333; padding: 10px; }
-    nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-    nav ul li a:hover { text-decoration: underline; }
-    .informacion h2 { margin-left: 230px; }
-    .Deportes h2 { margin-left: 270px; }
-    .inicio h2 {
-    margin-left: 200px; }
-    section h1 { margin-left: 370px; }
-    section h2 { margin-left: 290px; align-items: center; }
-    section { border: 0px solid #000000; padding: 15px; margin-top: 20px; border-radius: 5px; background: #e4e2ec; }
-    section h4 { color: #8853b3; 
-    margin-left: 300px;}
-    section h3 { color: #272725; 
-    margin-left: 10px; }
-    .Titulo { margin-left: 200px;}
-    img {
-      display: block;
-      margin: 5px auto;
-      height: auto;
-      width: auto;
-      align-items: center;
-    }
-    form {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  margin: 2rem auto;
-  font-family: 'Arial', sans-serif;
-}
 
-form h3 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
+  nav {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
 
-form label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #333;
-}
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
 
-form input[type="text"],
-form input[type="number"],
-form select {
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  font-size: 1rem;
-}
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
 
-form select:invalid {
-  color: #888;
-}
+  nav ul li a:hover {
+    background-color: #555;
+  }
 
-form input[type="submit"]:hover{
-  background-color: #6a4dad;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 2rem;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
+  /* ====== SECCIONES ====== */
+  section {
+    background: #ffffff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
 
-form input[type="submit"]:hover{
-  background-color: #5b3cae;}
+  section h1, section h2, section h3, section h4 {
+    text-align: center;
+    color: #3b2f5a;
+  }
 
-    
+  section h4 {
+    color: #8853b3;
+    font-weight: normal;
+  }
+
+  section p {
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  /* ====== FORMULARIO ====== */
+  form {
+    background-color: #f8f6ff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+
+  form h3 {
+    text-align: center;
+    color: #3b2f5a;
+    margin-bottom: 1.5rem;
+  }
+
+  form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  form input[type="submit"] {
+    background-color: #6a4dad;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  form input[type="submit"]:hover {
+    background-color: #563aa3;
+  }
+
+  /* ====== FOOTER ====== */
+  footer {
+    text-align: center;
+    background-color: #242322;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+  }
 </style>
-
 </head>
+
 <body>
-<header>
-  <h1>Liro</h1>
-</header>
-<body class="content">
-    <nav>
+  <header>
+    <h1>Club Deportivo Liro</h1>
+  </header>
+
+  <nav>
     <ul>
-      <li><a href="#Informacion">Informacion</a></li>
-      <li><a href="#Deportes">Deportes</a></li>
-      <li><a href="#Formulario">Formulario</a></li>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#deportes">Deportes</a></li>
+      <li><a href="#informacion">Información</a></li>
+      <li><a href="#formulario">Formulario</a></li>
     </ul>
   </nav>
-  <!-- Requisitos -->
-  <section class="inicio ">
-    <h1>-ˋˏ ༻Bienvenidos al club deportivo Liro༺ ˎˊ- </h2> 
-    <p>★En nuestro club, el deporte es más que una actividad: es una forma de vivir, compartir y crecer. Contamos con una amplia variedad de disciplinas para todas las edades y niveles, desde quienes se inician hasta quienes buscan entrenar de forma competitiva.</p>
 
-    <p>★Hockey, fútbol, básquet, natación, gimnasia, entre muchos otros deportes, forman parte de nuestra propuesta. Además, ofrecemos espacios de encuentro, valores de compañerismo y un ambiente familiar que nos identifica desde siempre.</p>
+  <section id="inicio">
+    <h1>༺ Bienvenidos al Club Deportivo Liro ༻</h1>
+    <p>★ En nuestro club, el deporte es más que una actividad: es una forma de vivir, compartir y crecer. Contamos con una amplia variedad de disciplinas para todas las edades y niveles, desde quienes se inician hasta quienes buscan entrenar de forma competitiva.</p>
 
-    <p>★Te invitamos a recorrer nuestro sitio, conocer cada actividad en detalle y sumarte a esta comunidad en movimiento.
-     Si querés formar parte, ya sea como jugador/a, familia o simplemente acercarte al club, encontrá toda la información necesaria en la sección de Inscripciones.</p>
+    <p>★ Hockey, fútbol, básquet, natación, gimnasia, entre muchos otros deportes, forman parte de nuestra propuesta. Además, ofrecemos espacios de encuentro, valores de compañerismo y un ambiente familiar que nos identifica desde siempre.</p>
 
+    <p>★ Te invitamos a recorrer nuestro sitio, conocer cada actividad en detalle y sumarte a esta comunidad en movimiento.</p>
   </section>
-    <section id="Formulario">
+
+  <section id="formulario">
     <h4>•——————•°•✿•°•——————•</h4>
     <h2>Formulario de Inscripción</h2>
-<form action="/mail" method="post">
-  <h3>¡Inscribite ya!</h3>
+    <form action="#" method="post">
+      <h3>¡Inscribite ya!</h3>
 
-  <label for="nombre">Nombre Completo:</label>
-  <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Rodríguez" required>
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Rodríguez" required>
 
-  <label for="edad">Edad:</label>
-  <input type="number" id="edad" name="edad" placeholder="Ej: 15" required>
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" placeholder="Ej: 15" required>
 
-  <label for="documento">Número de Documento:</label>
-  <input type="text" id="documento" name="documento" placeholder="Ej: 12345678" required>
+      <label for="documento">Número de Documento:</label>
+      <input type="text" id="documento" name="documento" placeholder="Ej: 12345678" required>
 
-  <label for="contacto">Información de Contacto:</label>
-  <input type="text" id="contacto" name="contacto" placeholder="Teléfono o email" required>
+      <label for="contacto">Información de Contacto:</label>
+      <input type="text" id="contacto" name="contacto" placeholder="Teléfono o email" required>
 
-  <label for="deporte">Deporte de Interés:</label>
-  <select id="deporte" name="deporte" required>
-    <option value="" disabled selected>Seleccioná un deporte</option>
-    <option value="hockey">Hockey</option>
-    <option value="futbol">Fútbol</option>
-    <option value="basquet">Básquet</option>
-    <option value="voley">Vóley</option>
-    <option value="natacion">Natación</option>
-    <option value="gimnasia">Gimnasia Artística</option>
-    <option value="tenis">Tenis</option>
-    <option value="atletismo">Atletismo</option>
-    <option value="danza">Danza</option>
-    <option value="artes_marciales">Artes Marciales</option>
-  </select>
+      <label for="deporte">Deporte de Interés:</label>
+      <select id="deporte" name="deporte" required>
+        <option value="" disabled selected>Seleccioná un deporte</option>
+        <option value="hockey">Hockey</option>
+        <option value="futbol">Fútbol</option>
+        <option value="basquet">Básquet</option>
+        <option value="voley">Vóley</option>
+        <option value="natacion">Natación</option>
+        <option value="gimnasia">Gimnasia Artística</option>
+        <option value="tenis">Tenis</option>
+        <option value="atletismo">Atletismo</option>
+        <option value="danza">Danza</option>
+        <option value="artes_marciales">Artes Marciales</option>
+      </select>
 
-  <input type="submit" value="Enviar Inscripción">
-</form>
+      <input type="submit" value="Enviar Inscripción">
+    </form>
+  </section>
 
-</section>
-
-<section id="Deportes">
+  <section id="deportes">
     <h4>•——————•°•✿•°•——————•</h4>
     <h2>Deportes</h2>
-    <p>En nuestro club deportivo, ofrecemos una amplia variedad de disciplinas para todas las edades y niveles. Ya sea que busques iniciarte en el deporte, entrenar de manera competitiva o simplemente disfrutar de la actividad física como una forma de recreación, tenemos opciones para vos.</p>
- 
-    <h3>Deportes que ofrecemos: </h3>
-    <p>Algunos de los deportes que podes practicar en el club, incluyen:</p>
-    <p>❥ Hockey</p>
-    <p>❥ Futbol</p>
-    <p>❥ Basquet</p>
-    <p>❥ Voley</p>
-    <p>❥ Natacion</p>
-    <p>❥ Gimnasia artistica</p>
-    <p>❥ Tenis</p>
-    <p>❥ Atletismo</p>
-    <p>❥ Danza</p>
-    <p>❥ Artes marciales</p>
-</section>
+    <p>En nuestro club deportivo, ofrecemos una amplia variedad de disciplinas para todas las edades y niveles. Ya sea que busques iniciarte en el deporte, entrenar de manera competitiva o simplemente disfrutar de la actividad física, tenemos opciones para vos.</p>
 
-    <section id="Informacion">
-        <h4>•——————•°•✿•°•——————•</h4>
-        <h2>Informacion</h2>
-    <h3>¿Que se necesita para participar?: </h3>
-    <p>❥ Edad minima: Cada actividad tiene su categoria por edad (infantil, juvenil, adultos) </p>
-    <p>❥ Formulario de inscripcion completo  </p>
-    <p>❥ Fotocopia de DNI </p>
-    <p>❥ Certificado medico de aptitud fisica vigente </p>
-    <p>❥ Autorizacion de padre/madre/tutor (si el participante es menor de edad) </p>
-    
-    <h3>Equipamiento: </h3>
-    <p>❥ Cada deporte tiene su propio equipo basico (Pelotas, sticks, raquetas, calzado adecuado, etc) </p>
-    <p>❥ En muchos casos, el club proporciona parte del material, pero el jugador/a debe traer sus elementos personales.</p>
-    <p>❥ Algunas actividades requieren uniforme o indumentaria deportiva especifica </p>
-    
-    <h3>Cuotas y pagos: </h3>
-    <p>❥ Cuota de inscripción (pago inicial para empezar)</p>
-    <p>❥ Cuota mensual o por clase.</p>
-    <p>❥ Costos adicionales en caso de torneos, salidas o actividades especiales</p>
-    
-    <h3>Compromiso con el deporte: </h3>
-    <p>Ser parte del club implica más que asistir a clases. Promovemos valores como el respeto, el trabajo en equipo, la inclusión y la constancia. Buscamos que cada persona se sienta parte de una comunidad activa y saludable.</p>
-    <h3>¿Como me inscribo?</h3>
-    <p>Podés consultar los horarios y cupos disponibles en la sección Inscripciones, acercarte a nuestra sede o comunicarte con nosotros por nuestras redes. Nuestro equipo estará disponible para ayudarte a elegir la actividad que mejor se adapte a vos.</p>
-</section>
- 
-<section>
-    <h3>¡Te esperamos para compartir juntos la pasión por el deporte!</h3>
-    <p>En nuestro club deportivo, cada día es una nueva oportunidad para superarte, hacer amigos y disfrutar del movimiento. No importa tu edad o nivel, acá hay un lugar para vos. ¡Sumate a nuestra comunidad y viví el deporte al máximo!</p>
-</section>
+    <h3>Deportes que ofrecemos:</h3>
+    <ul>
+      <li>Hockey</li>
+      <li>Fútbol</li>
+      <li>Básquet</li>
+      <li>Vóley</li>
+      <li>Natación</li>
+      <li>Gimnasia Artística</li>
+      <li>Tenis</li>
+      <li>Atletismo</li>
+      <li>Danza</li>
+      <li>Artes Marciales</li>
+    </ul>
+  </section>
+
+  <section id="informacion">
+    <h4>•——————•°•✿•°•——————•</h4>
+    <h2>Información</h2>
+
+    <h3>¿Qué se necesita para participar?</h3>
+    <ul>
+      <li>Edad mínima según categoría (infantil, juvenil, adultos)</li>
+      <li>Formulario de inscripción completo</li>
+      <li>Fotocopia de DNI</li>
+      <li>Certificado médico vigente</li>
+      <li>Autorización de padre/madre/tutor (si es menor)</li>
+    </ul>
+
+    <h3>Equipamiento</h3>
+    <ul>
+      <li>Cada deporte tiene su propio equipo básico</li>
+      <li>El club puede proporcionar parte del material</li>
+      <li>Algunas actividades requieren uniforme específico</li>
+    </ul>
+
+    <h3>Cuotas y Pagos</h3>
+    <ul>
+      <li>Cuota de inscripción inicial</li>
+      <li>Cuota mensual o por clase</li>
+      <li>Costos adicionales en torneos o salidas</li>
+    </ul>
+
+    <h3>Compromiso con el deporte</h3>
+    <p>Ser parte del club implica más que asistir a clases: promovemos respeto, trabajo en equipo e inclusión. Queremos que cada persona se sienta parte de una comunidad activa y saludable.</p>
+
+    <h3>¿Cómo me inscribo?</h3>
+    <p>Podés consultar horarios y cupos disponibles en la sección Inscripciones o acercarte a nuestra sede. Nuestro equipo estará disponible para ayudarte a elegir la actividad ideal para vos.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Club Deportivo Liro — Todos los derechos reservados</p>
+  </footer>
 </body>
-</main>
+</html>
 
-</main>
 
